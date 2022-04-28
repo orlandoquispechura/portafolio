@@ -1,0 +1,255 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  display: block;
+}
+main {
+  display: block;
+}
+/* header style  */
+header {
+  min-width: 100%;
+  position: fixed !important;
+  top: 0;
+  overflow: hidden;
+}
+.fondo-header {
+  /* background: linear-gradient(-10deg, blue, rgb(255, 255, 255)), blue; */
+  background-color: #2f3030;
+}
+.logo {
+  font-size: 30px;
+  margin-left: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00b7cf !important;
+}
+.logo:hover {
+  color: white !important;
+  text-shadow: 0px 0px 5px #00b7cf;
+  background-color: #00b7cf;
+  border-radius: 15px;
+  padding: 0px 20px;
+}
+.menu {
+  color: white !important;
+  font-size: 20px;
+  text-transform: u ppercase;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 10px !important;
+}
+.menu:hover {
+  color: white !important;
+  text-shadow: 0px 0px 5px #00b7cf;
+  background-color: #00b7cf;
+  border-radius: 15px;
+  padding: 1px 10px;
+}
+.collapse {
+  margin-left: 100px;
+  text-align: right !important;
+}
+
+/* section Inicio  */
+#inicio {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/imagen/fondo-inicio.jpg");
+
+  background-size: cover;
+  background-position: center center;
+  min-height: 600px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin-top: 77px;
+}
+#inicio h1 {
+  text-align: center;
+  color: white;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+#inicio h2 {
+  text-align: center;
+  color: white;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+#inicio .linea {
+  background-color: green;
+  min-width: 400px;
+  min-height: 2px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+/* section proyectos */
+
+#proyectos {
+  background: linear-gradient(0deg, #00b7cf, white 40%, #00b7cf);
+  height: 750px;
+}
+.container h2 {
+  text-align: center;
+  color: black;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+.title {
+  color: green;
+  text-align: center;
+}
+.card-text {
+  text-align: justify;
+  padding: 2px 7px;
+  color: rgba(77, 71, 71, 0.933);
+  font-weight: 500;
+}
+.proyecto-tarjeta img:hover {
+  opacity: 0.7;
+  cursor: cell;
+}
+/* section habilidades */
+
+#habilidades {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/imagen/fondo-habilidades.gif");
+  /* background-color: #00b7cf; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100%;
+}
+.container .titulo-habilidades {
+  color: black;
+  margin-bottom: 20px;
+}
+.grid-contenedor img:hover {
+  opacity: 0.5;
+}
+
+/* section contacto  */
+
+#contacto {
+  background-color: #00b7cf57;
+  height: 300px;
+}
+.d-flex img:hover{
+  transform: scale(1.3);
+}
+/* parallax en el portafolio  */
+
+.parallax {
+  height: 200px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/imagen/parallax3.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+/* final footer  */
+
+#pie {
+  height: 80px;
+  background-color: #2f3030;
+  text-align: center;
+}
+#pie p {
+  color: white;
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+/* media query movil  */
+@media screen and (max-width: 767px) {
+  .navbar-toggler{
+    background-color: #00b7cf !important;
+  }
+  #inicio .linea {
+    width: 30%;
+  }
+  #inicio h2 {
+    font-size: 12px;
+  }
+  /* proyecto media query movil  */
+  #proyectos {
+    /* background: linear-gradient(0deg, #d06ff7, white 40%, #7493e9 ); */
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("/imagen/parallax1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    height: 100%;
+    padding-bottom: 8px;
+  }
+
+  .parallax {
+    height: 100px;
+  }
+  /* habilidades media query movil  */
+  #habilidades {
+    top: 150px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("/imagen/fondo-habilidades.gif");
+    background-size: cover;
+    background-position: center center;
+    max-width: 100%;
+    height: 100%;
+  }
+  .container .titulo-habilidades {
+    color: white;
+    padding-top: 35px;
+  }
+  /* contacto media query movil  */
+  #contacto {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 15px;
+  }
+  .container .contacto-parrafo {
+    font-size: large;
+  }
+
+  /* footer media query  */
+  #footer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-toggler{
+    background-color: #00b7cf !important;
+  }
+  #proyectos {
+    height: 100%;
+    padding-bottom: 15px;
+  }
+  #contacto{
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  #proyectos {
+    height: 100%;
+    padding-bottom: 15px;
+  }
+}
