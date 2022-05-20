@@ -35,19 +35,19 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #00b7cf !important;
+  margin-top: 60px !important;
 }
 
 .logo:hover {
   color: white !important;
-  text-shadow: 0px 0px 5px #00b7cf;
-  background-color: #00b7cf;
+  text-shadow: 2px 2px 5px #00b7cf;
   border-radius: 15px;
   padding: 0px 20px;
 }
 
 .menu {
   color: white !important;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -55,9 +55,8 @@ header {
 }
 
 .menu:hover {
-  color: white !important;
-  text-shadow: 0px 0px 5px #00b7cf;
-  background-color: #00b7cf;
+  color: #00b7cf !important;
+  /* background-color: #00b7cf; */
   border-radius: 15px;
   padding: 1px 10px;
 }
@@ -108,17 +107,13 @@ header {
 /* section proyectos */
 
 #proyectos {
-  background-size: cover;
-  background-position: center;
-  background: url('/imagen/fondo.png'), #7b4397;
-  background: url('/imagen/fondo.png'), -webkit-gradient(linear, right top, left top, from(#012758), to(#e27f86));
-  background: url('/imagen/fondo.png'), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   height: 750px;
+  background-color: #00b7cf;
 }
 
 .container h2 {
   text-align: center;
-  color: #eee;
+  color: black;
   letter-spacing: 10px;
   text-transform: uppercase;
   padding-top: 20px;
@@ -164,11 +159,7 @@ header {
 /* section contacto  */
 
 #contacto {
-  background-size: cover;
-  background-position: center;
-  background: url('/imagen/fondo.png'), #7b4397;
-  background: url('/imagen/fondo.png'), -webkit-gradient(linear, right top, left top, from(#012758), to(#e27f86));
-  background: url('/imagen/fondo.png'), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-color: #00b7cf;
   height: 300px;
 }
 
