@@ -65,6 +65,9 @@ header {
   margin-left: 100px;
   text-align: right !important;
 }
+.nav-item {
+  transition: ease-in-out;
+}
 
 /* section Inicio  */
 #inicio {
@@ -113,7 +116,7 @@ header {
 
 .container h2 {
   text-align: center;
-  color: black;
+  color: #eee;
   letter-spacing: 10px;
   text-transform: uppercase;
   padding-top: 20px;
@@ -210,8 +213,10 @@ header {
   /* proyecto media query movil  */
   #proyectos {
     /* background: linear-gradient(0deg, #d06ff7, white 40%, #7493e9 ); */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5)),
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
       url("/imagen/parallax1.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
