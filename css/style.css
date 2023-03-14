@@ -255,7 +255,7 @@ header {
 
 #pie {
   height: 80px;
-  background-color: #2f3030;
+  background-color: rgb(3, 35, 54);
   display: flex;
   justify-content: center;
   align-items: center;
