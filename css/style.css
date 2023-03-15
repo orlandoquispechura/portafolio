@@ -212,14 +212,15 @@ header {
 }
 
 .content-habilidades{
-  padding-top: 10px;
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 30px 30px;
   justify-content: space-between;
+  padding-top: 10px;
 }
 .habilidad{
   width: 120px;
+  max-width: 100px;
   height: auto;
   background-color: #eee;
   border-radius: 7px;
@@ -324,10 +325,6 @@ header {
   .navbar-toggler {
     padding: 2px;
   }
-  .card {
-    width: 100%;
-    margin: 0 auto;
-  }
 }
 @media screen and (max-width: 483px) {
   .logo {
@@ -345,9 +342,15 @@ header {
     font-size: 2.7vw;
     letter-spacing: 3px;
   }
-  .card {
-    width: 100%;
-    margin: 0 auto;
+}
+@media screen and (max-width: 394){
+ 
+  .content-habilidades{
+    display: grid;
+    grid-template-columns: 1fr 1f;
+  }
+  .habilidades{
+    width: 50px;
   }
 }
 @media screen and (max-width: 443px) {
@@ -359,14 +362,13 @@ header {
     width: 60%;
     font-size: 2.7vw;
     letter-spacing: 5px;
-  }
-  #habilidades{
-    padding-bottom: 15px;
-  }
+  }  
   .content-habilidades{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 10px;
+    justify-content: space-evenly;
   }
-  
 }
 @media screen and (max-width: 618px) {
   #inicio p {
@@ -389,14 +391,17 @@ header {
     margin: 0 5px;
     font-size: 4.5vw;
   }
-  #habilidades{
-    padding-bottom: 15px;
-  }
   .content-habilidades{
+    width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 5px 5px;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px 5px;
+    padding-bottom: 10px;
   }
+  .habilidad {
+    width: 100px;
+  }
+
   /* proyecto media query movil  */
   #proyectos {
     /* background: linear-gradient(0deg, #d06ff7, white 40%, #7493e9 ); */
