@@ -7,50 +7,87 @@
   font-family: Loto sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+body {
+  overflow-y: scroll;
+  scroll-behavior: smooth !important;
 }
 
-main {
-  display: block;
+.btn-whats {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+  padding-bottom: 10px;
 }
-/* header style  */
-header {
+.btn-whats-pegajoso {
   width: 100%;
-  height: 80px;
+}
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+  background-color: #032336;
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: rgb(3, 35, 54);
+  padding: 0 50px;
 }
-
-.logo {
-  font-size: 3vw;
-  margin: 0 35px;
-  text-align: center;
+.column {
+  width: 450px;
+}
+.menu-header-logo {
+  text-decoration: none;
+  display: flex;
+  justify-content: left;
+}
+.menu-header-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.img-logo {
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
+  border-radius: 50%;
+}
+.menu-header-logo span {
+  font-size: 2.2em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #0dbf60;
-  padding: 0;
+  transition: 0.5s;
 }
-
-.logo:hover {
-  cursor: pointer !important;
-  color: #eee;
+.menu-header-logo span:hover {
+  color: #ccc;
+  transition: 0.5s;
 }
-.collapse {
-  margin-left: 50px;
-  text-align: center;
+.menu-header-logo:hover {
+  transition: 0.5s;
+  transform: translateY(-5px);
 }
-.text-color {
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-menu .link {
+  text-decoration: none;
   color: #0dbf60;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.3rem;
+  transition: 0.5s;
 }
-.text-color:hover {
-  color: #eee;
+.navbar-menu .link:hover {
+  color: #ccc;
+  transition: 0.5s;
+  border-top: 3px solid #ccc;
 }
+
 /* section Inicio  */
 #inicio {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -58,7 +95,7 @@ header {
 
   background-size: cover;
   background-position: center center;
-  min-height: 550px;
+  min-height: 100vh;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -97,29 +134,27 @@ header {
   color: #eee;
   letter-spacing: 10px;
   text-transform: uppercase;
-  padding: 20px 0 5px 0;
+  padding: 30px 0;
   margin: 0;
 }
 .contenedor-tarjeta {
-  width: 90%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   flex-wrap: wrap;
+  gap: 50px;
 }
 .tarjeta {
   position: relative;
-  width: 330px;
-  height: 300px;
-  margin: 15px;
+  width: 300px;
+  height: 280px;
   cursor: pointer;
 }
 .tarjeta .face {
   position: absolute;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   backface-visibility: hidden;
   border-radius: 10px;
   overflow: hidden;
@@ -188,12 +223,12 @@ header {
 .tarjeta:hover .back {
   transform: perspective(600px) rotateY(360deg);
 }
-.ver-proyectos{
+.ver-proyectos {
   width: 85%;
   margin: 0 auto;
   padding: 10px 0;
 }
-.ver-proyectos a{
+.ver-proyectos a {
   text-decoration: none;
   color: #eee;
   letter-spacing: 2px;
@@ -278,11 +313,11 @@ header {
   margin: 0;
 }
 /* sobre mi contacto  */
-.contenedor-contacto{
+.contenedor-contacto {
   max-width: 85%;
   margin: 0 auto;
 }
-.descripcion-texto{
+.descripcion-texto {
   background-color: #eee;
   padding: 15px 30px;
   border-radius: 8px;
@@ -334,71 +369,46 @@ header {
 }
 
 /* media query movil  */
-@media screen and (max-width: 352px) {
-  .navbar-collapse {
-    text-align: right;
+
+@media screen and (max-width: 950px) {
+  .btn-whats{
+    bottom: 10px;
+    right: 10px;
   }
-  #inicio p {
-    font-size: 2.7vw;
-    letter-spacing: 5px;
+  .menu-header {
+    flex-direction: column;
+    padding-top: 10px;
   }
-  .ver-proyectos a{
+  .menu-header-logo {
+    justify-content: center;
+  }
+  .menu-header-logo img {
+    width: 50px;
+    height: 50px;
+  }
+  .menu-header-logo span {
+    font-size: 25px;
+  }
+  .navbar-menu {
+    padding-bottom: 10px;
+    justify-content: center;
+  }
+  .navbar-menu .link {
+    padding: 0 5px;
     font-size: 15px;
   }
-}
-@media screen and (max-width: 370px) {
-  #inicio p {
-    font-size: 2.7vw;
-    letter-spacing: 3px;
-  }
-  .navbar-toggler {
-    padding: 2px;
-  }
-  
-}
-@media screen and (max-width: 483px) {
-  .logo {
-    margin: 0 2px;
-    font-size: 4.5vw;
-  }
-  .navbar-collapse {
-    text-align: right;
-  }
-  .navbar-toggler {
-    padding: 2px;
-  }
-  #inicio p {
-    font-size: 2.7vw;
-    letter-spacing: 3px;
-  }
-}
-@media screen and (max-width: 443px) {
-  .navbar-toggler {
-    background-color: #00b7cf;
-    color: #fff;
-  }
-  #inicio p {
-    font-size: 2.7vw;
-    letter-spacing: 5px;
-  }
-}
-@media screen and (max-width: 618px) {
-  #inicio p {
-    font-size: 2.7vw;
-    letter-spacing: 3px;
+  .contenedor-tarjeta{
+    gap: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  .navbar-collapse {
-    text-align: right;
+  .btn-whats{
+    bottom: 10px;
+  right: 10px;
   }
   #inicio p {
     font-size: 2.7vw;
     letter-spacing: 5px;
-  }
-  .logo {
-    margin: 0 5px;
-    font-size: 4.5vw;
   }
   /* proyecto media query movil  */
   #proyectos {
@@ -410,15 +420,22 @@ header {
       rgba(13, 191, 96, 1) 100%
     );
   }
-  .tarjeta{
-    position: relative;
+  .contenedor-tarjeta{
+    flex-direction: column;
+    gap: 0 5px;
+  }
+  .tarjeta {
     width: 320px;
     cursor: pointer;
     margin: 10px 0;
   }
+  .ver-proyectos {
+    text-align: center;
+  }
   .parallax {
     height: 100px;
   }
+
 
   /* habilidades media query movil  */
   #habilidades {
@@ -457,17 +474,58 @@ header {
     bottom: 0;
   }
 }
-@media screen and (max-width: 992px) {
-  .navbar-toggler {
-    background-color: #0dbf60;
-    color: #eee;
+@media screen and (max-width: 512px) {
+  .menu-header{
+   padding: 0;
   }
-  .navbar-collapse {
-    text-align: right;
+  .menu-header-logo {
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
   }
-  .logo {
-    padding: 0 8px;
-    font-size: 4.6vw;
-    line-height: 60px;
+  .menu-header-logo img {
+    width: 40px;
+    height: 40px;
+  }
+  .column{
+    width: 100%;
+  }
+  .btn-whats{
+    bottom: 10px;
+  right: 10px;
+  }
+}
+@media screen and (max-width: 443px) {
+  #inicio h1 {
+    letter-spacing: 7px;
+  }
+  #inicio p {
+    font-size: 2.7vw;
+    letter-spacing: 5px;
+  }
+}
+@media screen and (max-width: 352px) {
+  .btn-whats{
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 10px;
+    padding: 0;
+  }
+  .menu-header {
+    padding: 8px 0;
+  }
+  .menu-header-logo{
+    padding-top: 0;
+  }
+  .column{
+    width: 100%;
+  }
+  #inicio p {
+    font-size: 2.7vw;
+    letter-spacing: 5px;
+  }
+  .ver-proyectos a {
+    font-size: 15px;
   }
 }
