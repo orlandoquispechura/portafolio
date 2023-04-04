@@ -185,11 +185,11 @@ body {
 .tarjeta .back {
   transform: perspective(600px) rotateY(180deg);
   background: rgb(3, 35, 54);
-  padding: 2px 15px;
+  padding: 0px 10px;
   color: #eee;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -207,12 +207,13 @@ body {
 }
 .tarjeta .back h3 {
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
   letter-spacing: 2px;
   text-align: center;
 }
 .tarjeta .back p {
   letter-spacing: 1px;
+  margin: 0;
 }
 
 /* efecto hover para la tarjeta*/
